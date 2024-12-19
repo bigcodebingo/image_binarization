@@ -35,11 +35,11 @@ class BinarizationMethods:
             hist_values, bins = np.histogram(image_gray, bins=256, range=(0, 256))
             thresh = BinarizationMethods.threshold_otsu(hist_values)    
     
-            plt.figure(figsize=(8, 6))
-            plt.bar(bins[:-1], hist_values, color='b', width=7, align='center', alpha=0.25)
-            plt.axvline(x = thresh, color = 'red', linestyle = 'solid', linewidth = 2, label = f'порог по Оцу: {thresh}')
-            plt.legend()
-            plt.show()
+            # plt.figure(figsize=(8, 6))
+            # plt.bar(bins[:-1], hist_values, color='b', width=7, align='center', alpha=0.25)
+            # plt.axvline(x = thresh, color = 'red', linestyle = 'solid', linewidth = 2, label = f'порог по Оцу: {thresh}')
+            # plt.legend()
+            # plt.show()
         
         height, width = ImageProcessor.get_size(image_gray)
         result_image = np.zeros_like(image_gray)
