@@ -41,10 +41,4 @@ class ImageProcessor:
             
     def hist(image):
         hist_values, bins = np.histogram(image, bins=256, range=(0, 256))
-        # plt.bar(bins[:-1], hist_values, color='b', width=5, align='center', alpha=0.25)
-        # plt.show()
         return hist_values
-
-    
-    
-    
